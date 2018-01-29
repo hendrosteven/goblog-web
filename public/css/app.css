@@ -32,6 +32,12 @@ body {
     font-size: 14px;
 }
 
+#posting-list{
+    background-color: #F9F9F9;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
 /* Navbar */
 .navbar {    
     background: #900C3F ;     

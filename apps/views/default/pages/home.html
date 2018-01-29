@@ -5,23 +5,24 @@
             <div class="row">
                 <div class="col-lg-12">
                     <repeat group="{{ @postings }}" value="{{ @posting }}">
-                        <a href="#" id="title">{{ @posting.title }}</a>
-                        <p>
-                            by
-                            <a href="index.php" id="author">Administrator</a>
-                        </p>
-                        <p>
-                            <span class="glyphicon glyphicon-calendar"></span> {{ @posting.publish_date }}</p>
-                        <hr>
-                        <img class="img-responsive" src="{{ @posting.image }}" alt="">
-                        <hr>
-                        <p>
-                            {{ @posting.short_content }}
-                        </p>
-                        <a class="btn btn-danger btn-sm" href="#">Read More
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                        <hr>
+                        <div id="posting-list">
+                            <a href="#" id="title">{{ @posting.title }}</a>
+                            <p>
+                                by
+                                <a href="index.php" id="author">Administrator</a>
+                            </p>
+                            <p>
+                                <span class="glyphicon glyphicon-calendar"></span> {{ @posting.publish_date }}</p>
+                            <hr>
+                            <img class="img-responsive" src="{{ @posting.image }}" alt="">
+                            <hr>
+                            <p>
+                                {{ @posting.short_content }}
+                            </p>
+                            <a class="btn btn-danger btn-sm" href="#">Read More
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
                     </repeat>
                     <ul class="pager">
                         <li class="previous">
