@@ -1,0 +1,6 @@
+{
+    "require": {
+        "bcosca/fatfree": "^3.6",
+        "vlucas/valitron": "^1.4"
+    }
+}

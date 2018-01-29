@@ -1,0 +1,27 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. */
+}
+
+/* Navbar */
+.navbar {    
+    background: #900C3F ;     
+    
+}
+.navbar .nav>li>a {    
+    color : #ffffff;      
+    font-weight: normal;   
+}
+.navbar .navbar-header>a{
+     color : #ffffff;      
+    font-weight: normal;
+}
+
+.navbar .nav>li>a:hover,
+.navbar .nav>li>a:focus {    
+    color : #ffffff;    
+}
