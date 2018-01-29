@@ -1,3 +1,101 @@
-<div class="container">
-    <h1>Welcome</h1>
+<br>
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-12">
+                    <repeat group="{{ @postings }}" value="{{ @posting }}">
+                        <a href="#" id="title">{{ @posting.title }}</a>
+                        <p>
+                            by
+                            <a href="index.php" id="author">Administrator</a>
+                        </p>
+                        <p>
+                            <span class="glyphicon glyphicon-calendar"></span> {{ @posting.publish_date }}</p>
+                        <hr>
+                        <img class="img-responsive" src="{{ @posting.image }}" alt="">
+                        <hr>
+                        <p>
+                            {{ @posting.short_content }}
+                        </p>
+                        <a class="btn btn-danger btn-sm" href="#">Read More
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                        <hr>
+                    </repeat>
+                    <ul class="pager">
+                        <li class="previous">
+                            <a href="#">&larr; Older</a>
+                        </li>
+                        <li class="next">
+                            <a href="#">Newer &rarr;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Search</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Latest Post</h3>
+                        </div>
+                        <div class="panel-body">
+                            <repeat group="{{ @latest }}" value="{{ @posting }}">
+                                {{ @posting.title }}
+                                <br/>
+                            </repeat>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Categories</h3>
+                        </div>
+                        <div class="panel-body">
+                            <repeat group="{{ @categories }}" value="{{ @category }}">
+                                {{ @category.name }}
+                                <br/>
+                            </repeat>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Tags</h3>
+                        </div>
+                        <div class="panel-body">
+                            <repeat group="{{ @tags }}" value="{{ @tag }}">
+                                <span class="label label-danger">{{ @tag.name }}</span>
+                            </repeat>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

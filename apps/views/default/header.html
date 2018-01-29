@@ -23,26 +23,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ @BASE }}/">F3 Blog</a>
+                <a class="navbar-brand" href="{{ @BASE }}/">{{ @name }}</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <repeat group="{{ @pages }}" value="{{ @page }}">
+                        <li>
+                            <a href="{{ @BASE }}/page/{{ @page.id }}">{{ @page.name }}</a>
+                        </li>
+                    </repeat>
                     <li>
-                        <a href="/page/1">About</a>
+                        <a href="#">Login</a>
                     </li>
-                    <li>
-                        <a href="/packages">Packages</a>
-                    </li>
-                    <li>
-                        <a href="/galleries">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="/page/2">Terms</a>
-                    </li>
-                    <li>
-                        <a href="/page/3">Contact</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
