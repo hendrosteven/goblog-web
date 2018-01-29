@@ -7,6 +7,11 @@
                     <repeat group="{{ @postings }}" value="{{ @posting }}">
                         <div id="posting-list">
                             <a href="#" id="title">{{ @posting.title }}</a>
+                            <check if="{{ @posting.types==1 }}">
+                                <true><span class="label label-warning pull-right">Premium</span></true>
+                                <false><span class="label label-success pull-right">Free</span></false>
+                            </check>
+                            
                             <p>
                                 by
                                 <a href="index.php" id="author">Administrator</a>
