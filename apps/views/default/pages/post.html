@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h3 id="title">{{ @data.title }}</h3>
+        <check if="{{ @posting.types==1 }}">
+            <true>
+                <span class="label label-warning pull-right">Premium</span>
+            </true>
+            <false>
+                <span class="label label-success pull-right">Free</span>
+            </false>
+        </check>
+
+        <p>
+            by
+            <a href="index.php" id="author">Administrator</a>
+            <span>
+                <i class="fas fa-star" style="color:gold"></i>
+                <i class="fas fa-star" style="color:gold"></i>
+                <i class="fas fa-star" style="color:gold"></i>
+                <i class="fas fa-star" style="color:gold"></i>
+            </span>
+            <br>
+            <span class="glyphicon glyphicon-calendar"></span> {{ @data.publish_date }}
+        </p>
+        <hr>
+        <p>
+            {{ @data.full_content }}
+        </p>
+    </div>
+</div>
