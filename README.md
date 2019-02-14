@@ -1,4 +1,5 @@
-**How To Run**
+# Welcome to goBlog!
 
-$ composer update
-$ php -S localhost -h .
+This is goBlog frontend page source code
+
+![enter image description here](https://raw.githubusercontent.com/hendrosteven/goblog-web/master/frontend.png)
