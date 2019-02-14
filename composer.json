@@ -2,5 +2,8 @@
     "require": {
         "bcosca/fatfree": "^3.6",
         "vlucas/valitron": "^1.4"
+    },
+    "scripts": {
+        "run" : ["php -S localhost:8081 -t ."]       
     }
 }
